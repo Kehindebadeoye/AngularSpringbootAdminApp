@@ -21,6 +21,7 @@ private apiServerUrl = environment.apiBaseUrl;
     return this.http.put<Employee>(`${this.apiServerUrl}/employee/update`, employee);
   }
   public deleteEmployee(id: number): Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/employee/delete/{id}`);
+    // return this.http.delete<void>(`${this.apiServerUrl}/employee/delete/{id}`);
+    return this.http.delete<void>(`${this.apiServerUrl}/employee/delete/${id}`);
   }
 }

@@ -1,16 +1,19 @@
 package com.t2dstudio.admin.service;
 
 import java.nio.file.attribute.UserPrincipalNotFoundException;
+
 import java.util.List;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.t2dstudio.admin.exception.UserNotFoundException;
 import com.t2dstudio.admin.model.Employee;
 import com.t2dstudio.admin.repo.EmployeeRepo;
 
+@Transactional
 @Service
 public class EmployeeService {
 	
